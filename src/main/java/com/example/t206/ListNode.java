@@ -1,4 +1,4 @@
-package com.example.t25;
+package com.example.t206;
 
 /**
  * @program: leet-code
@@ -12,13 +12,5 @@ public class ListNode {
     ListNode next;
     ListNode(int x) {
         val = x;
-    }
-
-    @Override
-    public String toString() {
-        return "ListNode{" +
-                "val=" + val +
-                ", next=" + next +
-                '}';
     }
 }
