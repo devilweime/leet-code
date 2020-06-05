@@ -14,7 +14,7 @@ public class Solution1 {
         for (int i = 0; i < nums.length; i++) {
             countMap.put(nums[i],countMap.getOrDefault(nums[i],0)+1);
         }
-        PriorityQueue<Integer> pq = new PriorityQueue((a,b)-> countMap.get(a)-countMap.get(b));
+        PriorityQueue<Integer> pq = new PriorityQueue((a,b)-> countMap.get(b)-countMap.get(a));
         Set<Map.Entry<Integer, Integer>> entries = countMap.entrySet();
         for (Map.Entry<Integer, Integer> entry : entries) {
             if (pq.size() < k){
@@ -34,7 +34,7 @@ public class Solution1 {
     }
 
     public static void main(String[] args) {
-        int [] nums = {1,1,1,2,2,3};
+        int [] nums = {4,1,-1,2,-1,2,3};
         int k = 2;
         int[] res = new Solution1().topKFrequent(nums, k);
         System.out.println(Arrays.toString(res));
